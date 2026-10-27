@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uma rosa vermelha</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#060e19;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#f9dce5}.garden{position:relative;width:min(100%,690px);height:min(95vh,740px);min-height:530px;overflow:hidden;border-radius:22px;background:radial-gradient(ellipse at 52% 42%,#233046 0%,#111c2d 45%,#070f1b 85%);box-shadow:0 30px 90px #0006}.garden:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 78%,#31583f45,transparent 48%);pointer-events:none}.title{position:absolute;left:0;right:0;top:27px;text-align:center;font:italic 25px Georgia,serif;letter-spacing:.7px;color:#fbdce2;text-shadow:0 0 20px #e95c8660}.scene{position:absolute;inset:45px 0 65px;width:100%;height:calc(100% - 110px);overflow:visible}.stem{fill:none;stroke:url(#stemGradient);stroke-width:8;stroke-linecap:round;stroke-dasharray:430;stroke-dashoffset:430;filter:drop-shadow(0 0 4px #60a64544)}.stem-highlight{fill:none;stroke:#92bb56;stroke-width:1.7;stroke-linecap:round;stroke-dasharray:430;stroke-dashoffset:430;opacity:.5}.leaf{transform-box:fill-box;transform-origin:100% 80%;opacity:0;transform:scale(.05) rotate(-30deg)}.leaf.right{transform-origin:0% 90%;transform:scale(.05) rotate(30deg)}.leaf-vein{fill:none;stroke:#a5da70;stroke-width:1.5;opacity:.6}.thorn{opacity:0}.rose-head{filter:drop-shadow(0 13px 12px #0007);transform-origin:200px 167px;transform:scale(.28);opacity:0}.petal{transform-box:fill-box;transform-origin:50% 94%;transform:scale(.24) rotate(var(--closed,0deg));opacity:0;filter:drop-shadow(0 3px 3px #47000e65)}.petal .edge{fill:none;stroke:#ff94a3;stroke-width:1.6;opacity:.5}.bud{transform-box:fill-box;transform-origin:50% 90%;transform:scale(.4);opacity:0}.glow-dot{fill:#ffd9a1;filter:drop-shadow(0 0 6px #ffb87b);animation:twinkle var(--duration) ease-in-out infinite alternate;animation-delay:var(--delay)}.replay{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);border:1px solid #f4abc36b;border-radius:999px;padding:12px 22px;background:#eaa1bd;color:#421b2b;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 7px 25px #0004}.replay:hover{background:#ffd2df}.caption{position:absolute;bottom:80px;left:0;right:0;text-align:center;color:#efd1dfb3;font-size:12px;letter-spacing:.7px}.garden.play .stem,.garden.play .stem-highlight{animation:draw 2.1s ease-out forwards}.garden.play .stem-highlight{animation-delay:.1s}.garden.play .leaf{animation:leafOpen 1s cubic-bezier(.2,.8,.3,1.1) forwards;animation-delay:var(--delay)}.garden.play .leaf.right{animation-name:leafRight}.garden.play .thorn{animation:fade .5s 1.4s forwards}.garden.play .rose-head{animation:appearRose 1s 1.6s ease-out forwards}.garden.play .petal{animation:openPetal 1.6s cubic-bezier(.16,.85,.24,1.02) forwards;animation-delay:var(--delay)}.garden.play .bud{animation:budOpen 1s 3s ease-out forwards}.garden.play .rose-sway{animation:sway 5s 5s ease-in-out infinite;transform-origin:200px 560px}@keyframes draw{to{stroke-dashoffset:0}}@keyframes leafOpen{to{opacity:1;transform:scale(1) rotate(0deg)}}@keyframes leafRight{to{opacity:1;transform:scale(1) rotate(0deg)}}@keyframes fade{to{opacity:1}}@keyframes appearRose{to{opacity:1;transform:scale(1)}}@keyframes openPetal{0%{opacity:0;transform:scale(.24) rotate(var(--closed,0deg))}40%{opacity:1}100%{opacity:1;transform:scale(1) rotate(0deg)}}@keyframes budOpen{to{opacity:1;transform:scale(1)}}@keyframes sway{0%,100%{transform:rotate(0deg)}25%{transform:rotate(1deg)}70%{transform:rotate(-1.2deg)}}@keyframes twinkle{from{opacity:.12;transform:translateY(0)}to{opacity:.7;transform:translateY(-9px)}}@media(max-width:520px){.garden{border-radius:0;height:100vh;min-height:550px}.title{font-size:21px}.scene{inset:40px 0 65px}}@media(prefers-reduced-motion:reduce){.glow-dot{animation:none}}
+</style>
+</head>
+<body>
+<main class="garden play" id="garden">
+<div class="title">Boa tardeeeeeeeeeeeeeeeeeeeeeeeee!</div>
+<svg class="scene" viewBox="0 0 400 620" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Uma rosa vermelha com caule e folhas desabrochando">
+<defs>
+<linearGradient id="stemGradient" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#163e22"/><stop offset=".5" stop-color="#6d9d42"/><stop offset="1" stop-color="#244a29"/></linearGradient>
+<linearGradient id="leafGradient" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#a3d06b"/><stop offset=".4" stop-color="#4f933c"/><stop offset="1" stop-color="#1c502b"/></linearGradient>
+<linearGradient id="petalOuter" x1=".25" y1="0" x2=".7" y2="1"><stop stop-color="#fc3857"/><stop offset=".45" stop-color="#c9082f"/><stop offset="1" stop-color="#78071f"/></linearGradient>
+<linearGradient id="petalMid" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#ff6275"/><stop offset=".43" stop-color="#e1123c"/><stop offset="1" stop-color="#8b0928"/></linearGradient>
+<linearGradient id="petalInner" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fc7a8a"/><stop offset=".45" stop-color="#e92248"/><stop offset="1" stop-color="#8d0929"/></linearGradient>
+</defs>
+<!-- Single scene hierarchy: no conflicting CSS transforms on the same petals -->
+<g class="rose-sway">
+<path class="stem" d="M194 579 C198 514 213 451 211 383 C210 311 190 238 200 197"/>
+<path class="stem-highlight" d="M194 579 C198 514 213 451 211 383 C210 311 190 238 200 197"/>
+<path class="thorn" d="M209 430 L228 410 L213 437 Z" fill="#5d913c"/>
+<path class="thorn" d="M208 337 L194 324 L207 344 Z" fill="#5d913c"/>
+<g class="leaf" style="--delay:1s">
+<path d="M207 441 Q160 399 95 411 Q112 481 205 459 Z" fill="url(#leafGradient)"/>
+<path class="leaf-vein" d="M204 453 Q153 431 102 416 M167 438 l-12 -20 M146 433 l-15 14 M124 423 l-9 -8"/>
+</g>
+<g class="leaf right" style="--delay:1.27s">
+<path d="M209 352 Q249 299 319 322 Q311 392 213 373 Z" fill="url(#leafGradient)"/>
+<path class="leaf-vein" d="M216 364 Q260 340 310 328 M261 344 l6 -22 M282 338 l15 17 M238 353 l15 18"/>
+</g>
+<g class="leaf" style="--delay:1.48s"><path d="M203 463 Q169 458 155 491 Q192 500 208 471 Z" fill="url(#leafGradient)"/><path class="leaf-vein" d="M204 467 L161 489"/></g>
+<g class="leaf right" style="--delay:1.65s"><path d="M212 367 Q234 366 249 391 Q221 401 210 374 Z" fill="url(#leafGradient)"/><path class="leaf-vein" d="M213 371 L242 390"/></g>
+<g class="rose-head">
+<!-- calyx -->
+<path d="M184 203 Q170 227 177 242 L199 212 Q219 236 226 229 L215 197" fill="#477b32"/>
+<!-- outer ring of asymmetrical overlapping rose petals -->
+<g class="petal" style="--delay:2.03s;--closed:38deg"><path d="M194 201 C149 208 99 179 105 134 C108 110 136 99 156 109 C178 120 191 158 194 201Z" fill="url(#petalOuter)"/><path class="edge" d="M105 134 Q114 103 156 109"/></g>
+<g class="petal" style="--delay:2.12s;--closed:-38deg"><path d="M202 202 C246 207 290 180 296 144 C303 109 273 98 250 109 C229 118 209 159 202 202Z" fill="url(#petalOuter)"/><path class="edge" d="M296 144 Q297 109 250 109"/></g>
+<g class="petal" style="--delay:2.22s;--closed:23deg"><path d="M195 211 C142 216 131 185 142 144 C153 115 177 104 199 126 C211 146 210 181 195 211Z" fill="url(#petalOuter)"/></g>
+<g class="petal" style="--delay:2.3s;--closed:-26deg"><path d="M201 210 C251 219 271 180 257 142 C247 113 223 105 199 131 C183 158 188 188 201 210Z" fill="url(#petalOuter)"/></g>
+<g class="petal" style="--delay:2.38s;--closed:8deg"><path d="M165 179 C132 167 119 127 141 93 C153 72 185 78 202 100 C216 121 200 158 165 179Z" fill="url(#petalMid)"/><path class="edge" d="M141 93 Q168 69 202 100"/></g>
+<g class="petal" style="--delay:2.47s;--closed:-8deg"><path d="M224 175 C259 169 277 130 256 94 C245 72 212 77 193 105 C180 130 196 157 224 175Z" fill="url(#petalMid)"/><path class="edge" d="M256 94 Q229 73 193 105"/></g>
+<!-- middle cup -->
+<g class="petal" style="--delay:2.65s;--closed:20deg"><path d="M198 188 C163 186 143 163 152 126 C158 103 179 102 200 119 C220 137 223 163 198 188Z" fill="url(#petalMid)"/></g>
+<g class="petal" style="--delay:2.75s;--closed:-20deg"><path d="M201 188 C234 186 256 157 246 125 C238 103 217 107 198 122 C179 143 184 170 201 188Z" fill="url(#petalMid)"/></g>
+<g class="petal" style="--delay:2.84s;--closed:3deg"><path d="M172 145 C166 109 191 90 217 100 C237 111 233 129 215 146 C200 160 183 164 172 145Z" fill="url(#petalInner)"/></g>
+<g class="petal" style="--delay:2.95s;--closed:-7deg"><path d="M188 172 C160 151 171 125 192 119 C219 109 236 131 222 154 C214 168 202 177 188 172Z" fill="url(#petalInner)"/></g>
+<!-- curled rose spiral -->
+<g class="bud"><path d="M197 161 C177 151 180 132 192 123 C211 110 231 125 220 144 C214 154 196 157 193 146 C189 137 201 130 209 135 C215 140 207 146 202 143" fill="none" stroke="#7b0924" stroke-width="12" stroke-linecap="round"/><path d="M197 159 C183 148 185 133 195 127 C207 119 219 128 214 139 C211 146 198 149 196 141 C194 137 200 134 204 137" fill="none" stroke="#fa5973" stroke-width="5" stroke-linecap="round"/></g>
+</g>
+</g>
+<g id="fireflies"></g>
+</svg>
+<div class="caption">Para aquela que merece ser amada...</div>
+<!-- <button class="replay" id="replay" type="button">↻ Florescer novamente</button> -->
+</main>
+
+
+
+<script>
+    const lights = document.getElementById('fireflies');
+    const ns = 'http://www.w3.org/2000/svg';
+    for (let i = 0; i < 28; i++) {
+        const dot = document.createElementNS(ns, 'circle');
+        dot.setAttribute('class', 'glow-dot');
+        dot.setAttribute('cx', 35 + ((i * 73) % 330));
+        dot.setAttribute('cy', 55 + ((i * 107) % 470));
+        dot.setAttribute('r', i % 4 === 0 ? 2 : 1.2);
+        dot.style.setProperty('--duration', (1.6 + (i % 6) * 0.5) + 's');
+        dot.style.setProperty('--delay', (-i * 0.3) + 's');
+        lights.appendChild(dot);
+    }
+
+
+</script>
+
+    <script src="main.js"></script>
+    <audio id="musicaFundo" autoplay loop>
+        <source src="src/audio/musica2.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+</html>
